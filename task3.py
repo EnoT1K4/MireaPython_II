@@ -61,14 +61,31 @@ def task2():
             plt.scatter(X_test.iloc[i, 3], X_test.iloc[i, 2], color='red', s=150)
 
     print(f'accurasy:{accuracy_score(y_test, y_pred):.3}')
+
+
 def task3():
-    data_dict = [ {"blue" : 1,"red" : 2},
-                  {"green": 3, "brown": 4},
-                  {"blue": 1, "red": 4},
-                  {"blue": 2, "red": 2},
-    ]
+    data_dict = [{"blue": 1, "red": 2},
+                 {"green": 3, "brown": 4},
+                 {"blue": 1, "red": 4},
+                 {"blue": 2, "red": 2},
+                 ]
     dictvect = DictVectorizer(sparse=False)
     feat = dictvect.fit_transform(data_dict)
     print(feat)
 
-task3()
+
+print('Enter num task 1 or 2 or 3')
+inp = int(input())
+while inp != 0:
+    if inp == 1:
+        task1()
+        break
+    elif inp == 2:
+        task2()
+        break
+    elif inp == 3:
+        task3()
+        break
+    else:
+        print("Check input")
+        break

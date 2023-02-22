@@ -31,4 +31,21 @@ def task1():
     plt.savefig('x**3.png')
 
 
-task1()
+print('Enter num task 1 or 2 or 3')
+inp = int(input())
+while inp != 0:
+    if inp == 1:
+        task1()
+        break
+    elif inp == 2:
+        pass
+        #task2()
+       # break
+    elif inp == 3:
+        pass
+        #task3()
+        #break
+    else:
+        print("Check input")
+        break
+
