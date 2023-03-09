@@ -26,7 +26,6 @@ def task1():
 
 def task2():
     iris = sns.load_dataset('iris')
-    iris
     plt.figure(figsize=(16, 7))
     plt.subplot(121)
     sns.scatterplot(data=iris, x='petal_width', y='petal_length', hue='species', s=70)
@@ -43,13 +42,11 @@ def task2():
     X_train, X_test, y_train, y_test = train_test_split(iris.iloc[:, :-1],
                                                         iris.iloc[:, -1],
                                                         test_size=0.15)  # процент тут
-    X_train.shape, X_test.shape, y_train.shape, y_test.shape
     X_train.head()
     y_train.head()
     model = KNeighborsClassifier(n_neighbors=10)  # соседи тут
     model.fit(X_train, y_train)
     y_pred = model.predict(X_test)
-    y_pred
     plt.figure(figsize=(10, 7))
     sns.scatterplot(data=iris, x='petal_width', y='petal_length', hue='species', s=70)
     plt.xlabel('Length')

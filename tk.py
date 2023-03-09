@@ -1,10 +1,5 @@
 import numpy as np
 import pandas as pd
-from matplotlib import pyplot
-from pandas import Series, DataFrame
-from pandas.core import series
-from sklearn import preprocessing
-from sklearn.preprocessing import MinMaxScaler
 
 
 def task1():
@@ -72,7 +67,7 @@ def task32():
     url = 'https://raw.githubusercontent.com/akmand/datasets/master/iris.csv'
     dataframe = pd.read_csv(url)
     minimax = lambda x: (x - x.min()) / (x.max() - x.min())
-    dataframe['sepal_lenght_cm'] = minimax(dataframe['sepal_lenght_cm'])
+    dataframe['sepal_length_cm'] = minimax(dataframe['sepal_length_cm'])
     z_scal = lambda x: (x - x.mean()) / x.std()
     dataframe['sepal_width_cm'] = z_scal(dataframe['sepal_width_cm'])
     print(dataframe.head())
