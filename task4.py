@@ -129,7 +129,6 @@ while inp != 0:
         task2()
         inp = int(input())
         break
-    # break
     elif inp == 3:
         task3()
         inp = int(input())
