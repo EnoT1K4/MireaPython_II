@@ -123,15 +123,12 @@ inp = int(input())
 while inp != 0:
     if inp == 1:
         task1()
-        inp = int(input())
         break
     elif inp == 2:
         task2()
-        inp = int(input())
         break
     elif inp == 3:
         task3()
-        inp = int(input())
         break
     elif inp == 4:
         task4()
