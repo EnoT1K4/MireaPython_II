@@ -98,12 +98,6 @@ def task2():
         arrV[Z[0] - decrement], arrV[Z[1] - decrement] = arrV[Z[1] - decrement], arrV[Z[0] - decrement]
         return arrV
 
-    # функция как бы есть, но ее не юзают
-    #   def routeRep(V, Z):
-    #     for z in Z:
-    #        V = routeOneRep(V, z)
-    #   return V
-
     def chooseRoute(distances, V, Z, T, P):
         sumLength = routeLen(V, distances)
         arrSum = [sumLength]
